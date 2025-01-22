@@ -20,13 +20,13 @@ extract_wvs_values <- function(wvs_data) {
     )
   )
 
-  value_info <- purrr::map_df(
+  value_info <-  purrr::map_df(
     names(wvs_data),
     ~ tibble::tibble(
       variable_name = .x,
-      question_value = attr(wvs_data[[.x]], "labels")
-    )
-  )
+      question_value = attr(wvs_data[[.x]], "labels"),
+      value_label = names(attr(wvs_data[[.x]], "labels"))
+    ))
 
   value_info <- dplyr::left_join(variables_info, value_info)
 
