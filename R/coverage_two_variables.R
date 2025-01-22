@@ -8,7 +8,7 @@
 #' @param var1 The first variable name as a string.
 #' @param var2 The second variable name as a string.
 #' @return A tibble with columns: `country`, `year`, `var1`, `var2`, and `both_present` (1 = available, 0 = missing).
-#' @importFrom dplyr filter select pivot_wider mutate rename
+#' @importFrom dplyr filter select mutate rename
 #' @importFrom tidyr pivot_wider
 #' @examples
 #' # Example usage with a dataset named `coverage_data_long`
