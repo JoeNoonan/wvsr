@@ -1,0 +1,16 @@
+Package: wvsr
+Type: Package
+Title: Tools With World Values SUrvey
+Version: 0.0.1
+Authors@R: c(
+    person(
+      "Joseph", "Noonan",
+      email = "joe.d.noonan@gmail.com",
+      role = c("aut", "cre")
+    )
+  )
+Description: Tools to work with the World Values Survey (WVS)
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.2

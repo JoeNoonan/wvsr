@@ -1,0 +1,27 @@
+{
+    "id": "6DA65892",
+    "path": "C:/R_projects/wvsr/R/coverage_dataset_creator.R",
+    "project_path": "R/coverage_dataset_creator.R",
+    "type": "r_source",
+    "hash": "934716999",
+    "contents": "",
+    "dirty": false,
+    "created": 1737534163756.0,
+    "source_on_save": false,
+    "relative_order": 5,
+    "properties": {
+        "tempName": "Untitled3",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "16,30",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1737553503,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1737553503147,
+    "read_only": false,
+    "read_only_alternatives": []
+}
