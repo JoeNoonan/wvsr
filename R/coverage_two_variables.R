@@ -27,8 +27,7 @@ check_variable_coverage <- function(coverage_data_long, var1, var2) {
     tidyr::pivot_wider(names_from = variable_name, values_from = coverage_n, values_fill = 0) %>%
     dplyr::mutate(
       both_present = ifelse(.data[[var1]] > 0 & .data[[var2]] > 0, 1, 0)
-    ) %>%
-    dplyr::rename(country = COUNTRY_ALPHA, year = S002VS)
+    )
 
   return(filtered_data)
 }

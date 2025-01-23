@@ -74,7 +74,7 @@ coverage_data_long <- coverage_dataset_creator(wvs_data)
 check_variable_coverage(coverage_data_long, "A027", "A124_06") 
 
 # A tibble: 5 × 5
-  country  year  A027 A124_06 both_present
+  COW_ALPHA  S002VS  A027 A124_06 both_present
   <chr>   <dbl> <dbl>   <dbl>        <dbl>
 1 USA         3  1542    1542            1
 2 USA         4     0    1200            0
