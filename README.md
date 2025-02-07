@@ -2,10 +2,9 @@
 
 This is a small R package designed to help make working with the World Values Survey (WVS)  a bit easier in R.
 
-T His package lets you easily organize metadata about the dataset, namely question variable names, value labels, and information about coverage.
+wvsr lets you easily organize metadata about the dataset, namely question variable names, value labels, and information about coverage.
 Having these dataframes can avoid some of the idiosyncratic issues that arise from using labled dataframes.
 
-It also has code to integrate the European Values Study (EVS) with WVS to create IVS 1981-2022. This takes about four minutes to run. 
 
 Lastly, I have started to add some tools to add information about the parties respondents support using ids from Party Facts. 
 
