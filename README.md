@@ -31,7 +31,7 @@ Below shows some examples of the functionality so far. Note that the resulting t
 wvs_data <- read_wvs_data("data-raw/WVS_Time_Series_1981-2022_stata_v5_0.dta")
 
 # Extract variable labels
-variable_labels <- extract_wvs_labels(wvs_data)
+variable_labels <- extract_labels(wvs_data)
 
 # A tibble: 11 × 2
    variable_name question_label                                                   
@@ -50,7 +50,7 @@ variable_labels <- extract_wvs_labels(wvs_data)
 
 
 # Extract value labels
-value_labels <- extract_wvs_values(wvs_data)
+value_labels <- extract_values(wvs_data)
 
 # A tibble: 6 × 4
   variable_name question_label                          question_value value_label  
