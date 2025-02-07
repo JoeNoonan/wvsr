@@ -1,10 +1,14 @@
-# Intro
+# wvsr
 
-This is a small R package designed to help make working with the World Values Survey (WVS) a bit easier in R.
+This is a small R package designed to help make working with the World Values Survey (WVS)  a bit easier in R.
 
-The main purpose currently is to easily organize metadata about the dataset, namely question variable names, value labels, and information about coverage. 
-
+T His package lets you easily organize metadata about the dataset, namely question variable names, value labels, and information about coverage.
 Having these dataframes can avoid some of the idiosyncratic issues that arise from using labled dataframes.
+
+It also has code to integrate the European Values Study (EVS) with WVS to create IVS 1981-2022. This takes about four minutes to run. 
+
+Lastly, I have started to add some tools to add information about the parties respondents support using ids from Party Facts. 
+
 
 ## Installation
 
@@ -20,7 +24,7 @@ remotes::install_github("JoeNoonan/wvsr")
 
 ## Examples
 
-Below shows examples of the total functionality of the package so far. Note that the resulting tables produced below are filtered for clarity. 
+Below shows some examples of the functionality so far. Note that the resulting tables produced below are filtered for clarity. 
 
 ```
 ### Reading the dataset, read_wvs_data() is just a wrapper for read_dta().
@@ -81,5 +85,23 @@ check_variable_coverage(coverage_data_long, "A027", "A124_06")
 3 USA         5     0    1240            0
 4 USA         6     0    2232            0
 5 USA         7  2592    2435            1
+
+# Add Party Facts ID 
+
+merge_wvs_party_id(wvs_data_short)
+   COUNTRY_ALPHA COW_NUM          COW_ALPHA S004           E179WVS                                   E180WVS                                   E182                                    first_vote_partyfacts_id second_vote_partyfact…¹ never_vote_partyfact…²
+   <chr>         <dbl+lbl>        <chr>     <dbl+lbl>      <dbl+lbl>                                 <dbl+lbl>                                 <dbl+lbl>                                                  <dbl>                   <dbl>                  <dbl>
+ 1 BGD           771 [Bangladesh] BNG       -4 [Not asked] 50001 [BGD: Bangladesh Awami League]      50003 [BGD: Jatiya Party (Manju)]         50004 [BGD: Bangladesh Jamaat-e-Islami]                     2299                    2341                   2340
+ 2 BGD           771 [Bangladesh] BNG       -4 [Not asked] 50002 [BGD: Bangladesh Nationalist Party] 50004 [BGD: Bangladesh Jamaat-e-Islami]   50001 [BGD: Bangladesh Awami League]                        3782                    2340                   2299
+ 3 BGD           771 [Bangladesh] BNG       -4 [Not asked] 50001 [BGD: Bangladesh Awami League]      50002 [BGD: Bangladesh Nationalist Party] 50004 [BGD: Bangladesh Jamaat-e-Islami]                     2299                    3782                   2340
+ 4 BGD           771 [Bangladesh] BNG       -4 [Not asked] 50002 [BGD: Bangladesh Nationalist Party] 50004 [BGD: Bangladesh Jamaat-e-Islami]   50001 [BGD: Bangladesh Awami League]                        3782                    2340                   2299
+ 5 BGD           771 [Bangladesh] BNG       -4 [Not asked] 50001 [BGD: Bangladesh Awami League]      50003 [BGD: Jatiya Party (Manju)]         50004 [BGD: Bangladesh Jamaat-e-Islami]                     2299                    2341                   2340
+ 6 BGD           771 [Bangladesh] BNG       -4 [Not asked] 50001 [BGD: Bangladesh Awami League]      50002 [BGD: Bangladesh Nationalist Party] 50004 [BGD: Bangladesh Jamaat-e-Islami]                     2299                    3782                   2340
+ 7 BGD           771 [Bangladesh] BNG       -4 [Not asked] 50001 [BGD: Bangladesh Awami League]          5 [Other]                             50004 [BGD: Bangladesh Jamaat-e-Islami]                     2299                      NA                   2340
+ 
+
+ 
+
+
 
 ```

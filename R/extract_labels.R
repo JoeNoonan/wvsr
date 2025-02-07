@@ -1,4 +1,4 @@
-#' Extract WVS Variable Labels
+#' Extract Variable Labels
 #'
 #' This function reads a World Values Survey (WVS) dataset in .dta format and extracts
 #' variable names along with their associated question labels.
@@ -10,13 +10,13 @@
 #' @importFrom tibble tibble
 #' @examples
 #' @export
-extract_wvs_labels <- function(wvs_data) {
+extract_labels <- function(data) {
 
   variables_info <- purrr::map_df(
-    names(wvs_data),
+    names(data),
     ~ tibble::tibble(
       variable_name = .x,
-      question_label = attr(wvs_data[[.x]], "label")
+      question_label = attr(data[[.x]], "label")
     )
   )
 

@@ -10,22 +10,22 @@
 #' @importFrom haven read_dta
 #' @examples
 #' @export
-extract_wvs_values <- function(wvs_data) {
+extract_values <- function(data) {
 
   variables_info <- purrr::map_df(
-    names(wvs_data),
+    names(data),
     ~ tibble::tibble(
       variable_name = .x,
-      question_label = attr(wvs_data[[.x]], "label")
+      question_label = attr(data[[.x]], "label")
     )
   )
 
   value_info <-  purrr::map_df(
-    names(wvs_data),
+    names(data),
     ~ tibble::tibble(
       variable_name = .x,
-      question_value = attr(wvs_data[[.x]], "labels"),
-      value_label = names(attr(wvs_data[[.x]], "labels"))
+      question_value = attr(data[[.x]], "labels"),
+      value_label = names(attr(data[[.x]], "labels"))
     ))
 
   value_info <- dplyr::left_join(variables_info, value_info)
